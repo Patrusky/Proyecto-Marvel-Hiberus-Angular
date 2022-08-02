@@ -1,0 +1,15 @@
+.activo {
+  background-color: #ccc;
+}
+.activo a {
+  color: green;
+}
+ul {
+  list-style: none;
+}
+li {
+  display: inline-block;
+  margin-right: 20px;
+  background-color: #eee;
+  padding: 15px;
+}
