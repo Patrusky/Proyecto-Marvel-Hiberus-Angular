@@ -8,6 +8,11 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { ComicsComponent } from './componentes/comics/comics.component';
 import { FormularioComponent } from './componentes/formulario/formulario.component';
+import { ErrorComponent } from './componentes/error/error.component';
+import { PersonajesComponent } from './componentes/personajes/personajes.component';
+import { PersonajeDetalleComponent } from './componentes/personaje-detalle/personaje-detalle.component';
+
+
 
 @NgModule({
   declarations: [
@@ -16,11 +21,14 @@ import { FormularioComponent } from './componentes/formulario/formulario.compone
     FooterComponent,
     HomeComponent,
     ComicsComponent,
-    FormularioComponent
+    FormularioComponent,
+    ErrorComponent,
+    PersonajesComponent,
+    PersonajeDetalleComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
