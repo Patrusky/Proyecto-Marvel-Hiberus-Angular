@@ -1,10 +1,14 @@
 .activo {
   font-weight: bolder;
-  /*text-decoration: underline;*/
-  color: goldenrod;
-  border-bottom: 1px solid goldenrod;
-  border-right: 1px solid goldenrod;
+  color: white;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
   border-radius: 5px 0;
+}
+
+.classmenu {
+  justify-content: flex-end;
+  width: 100%;
 }
 
 ul {
@@ -13,11 +17,7 @@ ul {
 li {
   display: inline-block;
   margin-right: 20px;
-  /*background-color: #eee;*/
   padding: 15px;
+  font-size: 18px;
 }
 
-/*.class=menu {
-  d-flex justify-content-end
-
-}*/
