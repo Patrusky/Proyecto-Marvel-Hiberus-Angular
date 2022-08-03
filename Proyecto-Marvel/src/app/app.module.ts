@@ -8,7 +8,7 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { ComicsComponent } from './componentes/comics/comics.component';
 import { FormularioComponent } from './componentes/formulario/formulario.component';
-import { ErrorComponent } from './error/error.component';
+import { ErrorComponent } from './componentes/error/error.component';
 
 
 
