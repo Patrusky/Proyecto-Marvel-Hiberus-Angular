@@ -1,15 +1,23 @@
 .activo {
-  background-color: #ccc;
+  font-weight: bolder;
+  /*text-decoration: underline;*/
+  color: goldenrod;
+  border-bottom: 1px solid goldenrod;
+  border-right: 1px solid goldenrod;
+  border-radius: 5px 0;
 }
-.activo a {
-  color: green;
-}
+
 ul {
   list-style: none;
 }
 li {
   display: inline-block;
   margin-right: 20px;
-  background-color: #eee;
+  /*background-color: #eee;*/
   padding: 15px;
 }
+
+/*.class=menu {
+  d-flex justify-content-end
+
+}*/
