@@ -7,3 +7,7 @@
 .container {
     width: auto;
 }
+#main .carousel-inner img{
+  max-height: 70vh;
+  object-fit: cover;
+}
