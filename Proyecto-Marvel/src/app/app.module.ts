@@ -9,6 +9,8 @@ import { HomeComponent } from './componentes/home/home.component';
 import { ComicsComponent } from './componentes/comics/comics.component';
 import { FormularioComponent } from './componentes/formulario/formulario.component';
 import { ErrorComponent } from './componentes/error/error.component';
+import { PersonajesComponent } from './componentes/personajes/personajes.component';
+import { PersonajeDetalleComponent } from './componentes/personaje-detalle/personaje-detalle.component';
 
 
 
@@ -20,7 +22,9 @@ import { ErrorComponent } from './componentes/error/error.component';
     HomeComponent,
     ComicsComponent,
     FormularioComponent,
-    ErrorComponent
+    ErrorComponent,
+    PersonajesComponent,
+    PersonajeDetalleComponent
   ],
   imports: [
     BrowserModule,
