@@ -1,0 +1,20 @@
+.logofooter {
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer {
+    color:white;
+}
+
+footer a {
+    text-decoration: none;
+    color: white !important;
+}
+
+@media (max-width: 762px) {
+    .logofooter {
+        justify-content: center;
+    }
+    
+}
