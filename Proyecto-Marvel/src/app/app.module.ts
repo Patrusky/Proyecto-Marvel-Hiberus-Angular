@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,8 @@ import { FormularioComponent } from './componentes/formulario/formulario.compone
 import { ErrorComponent } from './componentes/error/error.component';
 import { PersonajesComponent } from './componentes/personajes/personajes.component';
 import { PersonajeDetalleComponent } from './componentes/personaje-detalle/personaje-detalle.component';
+import { PersonajesService } from './services/personajes.service';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -28,9 +31,11 @@ import { PersonajeDetalleComponent } from './componentes/personaje-detalle/perso
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [PersonajesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
