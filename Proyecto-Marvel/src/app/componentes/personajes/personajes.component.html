@@ -9,3 +9,9 @@ Nombre: <input type="text" [(ngModel)]="nombre" />
         <li>Nombre: {{personaje.name}}</li>
     </ul>
 </div>
+<div>
+  <div *ngFor="let heroe of heroes">
+    <p>{{heroe.name}}</p>
+    <img src="{{heroe.thumbnail.path}}.{{heroe.thumbnail.extension}}" >
+  </div>
+</div>
