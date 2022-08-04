@@ -4,9 +4,6 @@ import { HomeComponent } from './componentes/home/home.component';
 import { ComicsComponent } from './componentes/comics/comics.component';
 import { PersonajesComponent } from './componentes/personajes/personajes.component';
 import { FormularioComponent } from './componentes/formulario/formulario.component';
-import { PersonajesComponent } from './componentes/personajes/personajes.component';
-
-
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
