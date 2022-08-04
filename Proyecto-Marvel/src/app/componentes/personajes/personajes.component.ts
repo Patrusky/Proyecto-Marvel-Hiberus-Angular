@@ -19,7 +19,7 @@ export class PersonajesComponent {
       console.log("Personajes", this.personajes);
       //escoger a 4
       // Filtramos los id de los personajes = [{id: 1},{id: 2}, {id: 3}] y con el includes incluimos solos los 4 que indicamos
-      let arraydeHeroes = [1011334,1017100,1010699,1011266];
+      let arraydeHeroes = [1009664,1009368,1010338,1011266];
       this.heroes = this.personajes.filter( (personaje:any) => {
         return arraydeHeroes.includes(personaje.id);
       });

@@ -1,27 +1,21 @@
 <div class="container">
   <section class="get-in-touch">
     <div class="personajes">
-      <h2 class="title">Personajes Destacados</h2>
-      <div class="row">
-        <div class="col-md-3">
-          <img src="" alt="" class="w-100">
-          <p>Nombre</p>
-          <button type="button" class="btn btn-lg submit-btn"><a routerLink="">Detalles</a></button>
-        </div>
+      <h2 class="title">Comics</h2>
 
+      <div class="row" *ngFor="let comic of comics">
+        <div >
+          <div class="col-md-3">
+            <img src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}" alt="" class="w-100">
+            <p>{{comic.title}}</p>
+
+            <button type="button" class="btn btn-lg  submit-btn"><a routerLink="">Detalles</a></button>
+          </div>
+        </div>
       </div>
     </div>
     <div class="comics">
-      <h2 class="title">Comics</h2>
-      <div class="row">
-        <div class="col-md-3">
-          <img src="" alt="" class="w-100">
-          <p>titulo</p>
-          <p>Autor</p>
 
-          <button type="button" class="btn btn-lg  submit-btn"><a routerLink="">Detalles</a></button>
-        </div>
-      </div>
     </div>
   </section>
 </div>
