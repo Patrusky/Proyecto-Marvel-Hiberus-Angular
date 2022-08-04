@@ -1,1 +1,16 @@
-<p>personajes works!</p>
+<h1>Todos los Personajes</h1>
+<ul>
+    <li *ngFor="let personaje of personajes">{{personaje.name}}
+    </li>
+</ul>
+
+<h2>Busca tu Personaje</h2>
+Nombre: <input type="text" [(ngModel)]="nombre" />
+<button (click)="buscarPersonaje()">Buscar</button>
+
+<div *ngIf="personaje != null">
+    <h2>Datos de tu Personaje: {{personaje.name}}</h2>
+    <ul>
+        <li>Nombre: {{personaje.name}}</li>
+    </ul>
+</div>
