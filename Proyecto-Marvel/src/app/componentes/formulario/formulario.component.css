@@ -35,7 +35,6 @@ body {
     letter-spacing: 1px;
     font-size: 2.2em;
     line-height: 48px;
-    padding-bottom: 48px;
     color: #5543ca;
     background: #5543ca;
     background: -moz-linear-gradient(left, #f4524d 0%, #5543ca 100%) !important;
@@ -211,3 +210,17 @@ body {
   background-color: #de463b;
   color: #ffffff;
 }
+
+.responsive-map{
+  overflow: hidden;
+  padding-bottom:400px;
+  position:relative;
+  height:0;
+  }
+  .responsive-map iframe{
+  left:0;
+  top:0;
+  height:400px;
+  width:100%;
+  position:absolute;
+  }

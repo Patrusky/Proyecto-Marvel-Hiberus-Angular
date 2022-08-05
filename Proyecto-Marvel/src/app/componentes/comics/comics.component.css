@@ -4,25 +4,27 @@ a {
   color: #fff;
 }
 
-.bodyClass {
-  display: flex;
-}
-
-.row {
+.personajes {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
+
 
 .cards {
   padding: 10px;
   margin: 20px;
   display: flex;
-  flex-wrap: wrap;
+  max-height: 800px;
+
+}
+
+img {
+  max-height: 300px;
 }
 
 .get-in-touch {
-  max-width: 800px;
-  margin: 50px auto;
+  margin: 10px auto;
   position: relative;
 }
 
@@ -31,25 +33,6 @@ a {
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: 3.2em;
-  line-height: 48px;
-  padding-bottom: 48px;
-  color: #5543ca;
-  background: #5543ca;
-  background: -moz-linear-gradient(left, #f4524d 0%, #5543ca 100%) !important;
-  background: -webkit-linear-gradient(left,
-      #f4524d 0%,
-      #5543ca 100%) !important;
-  background: linear-gradient(to right, #f4524d 0%, #5543ca 100%) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  background-clip: transparent;
-}
-
-.get-in-touch .title3 {
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 2.2em;
   line-height: 48px;
   padding-bottom: 48px;
   color: #5543ca;
