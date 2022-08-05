@@ -1,8 +1,3 @@
-<h1>Todos los Personajes</h1>
-<ul>
-    <li *ngFor="let personaje of personajes">{{personaje.name}}
-    </li>
-</ul>
 
 <h2>Busca tu Personaje</h2>
 Nombre: <input type="text" [(ngModel)]="nombre" />
@@ -13,4 +8,10 @@ Nombre: <input type="text" [(ngModel)]="nombre" />
     <ul>
         <li>Nombre: {{personaje.name}}</li>
     </ul>
+</div>
+<div>
+  <div *ngFor="let heroe of heroes">
+    <p>{{heroe.name}}</p>
+    <img src="{{heroe.thumbnail.path}}.{{heroe.thumbnail.extension}}" >
+  </div>
 </div>

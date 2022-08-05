@@ -14,6 +14,7 @@ import { PersonajesComponent } from './componentes/personajes/personajes.compone
 import { PersonajeDetalleComponent } from './componentes/personaje-detalle/personaje-detalle.component';
 import { PersonajesService } from './services/personajes.service';
 import { FormsModule } from '@angular/forms';
+import { ComicsService } from './services/comics.service';
 
 
 
@@ -35,7 +36,9 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [PersonajesService],
+  providers: [
+    PersonajesService,
+    ComicsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
