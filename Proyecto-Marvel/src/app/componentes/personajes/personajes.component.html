@@ -1,17 +1,24 @@
+<div class="container">
+  <section class="get-in-touch">
+    <h2 class="title3">Busca tu Personaje</h2>
+    Nombre: <input type="text" [(ngModel)]="nombre" />
 
-<h2>Busca tu Personaje</h2>
-Nombre: <input type="text" [(ngModel)]="nombre" />
-<button (click)="buscarPersonaje()">Buscar</button>
-
-<div *ngIf="personaje != null">
-    <h2>Datos de tu Personaje: {{personaje.name}}</h2>
-    <ul>
+    <button (click)="getPersonaje()">BuscarP</button>
+    <div *ngIf="personaje != null">
+      <h2>Datos de tu Personaje: {{personaje.name}}</h2>
+      <ul>
         <li>Nombre: {{personaje.name}}</li>
-    </ul>
-</div>
-<div>
-  <div *ngFor="let heroe of heroes">
-    <p>{{heroe.name}}</p>
-    <img src="{{heroe.thumbnail.path}}.{{heroe.thumbnail.extension}}" >
-  </div>
+      </ul>
+    </div>
+    <hr>
+  </section>
+  <section class="get-in-touch">
+    <h1 class="title">Personajes</h1>
+    <div *ngFor="let heroe of heroes">
+      <div class="col-md-3">
+        <img src="{{heroe.thumbnail.path}}.{{heroe.thumbnail.extension}}" class="w-50">
+        <p>{{heroe.name}}</p>
+      </div>
+    </div>
+  </section>
 </div>

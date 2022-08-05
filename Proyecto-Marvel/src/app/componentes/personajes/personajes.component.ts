@@ -8,38 +8,37 @@ import { PersonajesService } from 'src/app/services/personajes.service';
 })
 export class PersonajesComponent {
 
-  personajes: any = [];
+  personajes: any[] = [];
   nombre: string = '';
-  personaje: any;
-  heroes: any[] = [];
+  personaje:any ;
+  heroes: any[]= [];
+
 
   constructor(private personajeService: PersonajesService) {
     this.personajeService.getAll().subscribe((datos) => {
       this.personajes = datos.data.results;
       console.log("Personajes", this.personajes);
-      //escoger a 4
-      // Filtramos los id de los personajes = [{id: 1},{id: 2}, {id: 3}] y con el includes incluimos solos los 4 que indicamos
-      let arraydeHeroes = [1009664, 1009368, 1010338, 1009562];
-      this.heroes = this.personajes.filter((personaje: any) => {
-        return arraydeHeroes.includes(personaje.id);
-      });
-
-      this.heroes.map(personaje => {
-        if (personaje.thumbnail.path.search('image_not_available') != -1) {
-          personaje.thumbnail.path = '/assets/personajes/' + personaje.id;
-        }
-      });
-      console.log(this.heroes);
     });
 
+  let arrayHeroes = [1009664, 1009368, 1010338, 1009562];
+  arrayHeroes.forEach((id: number) => {
+      this.personajeService.getById(id).subscribe((datos) =>{
+        this.heroes.push(datos.data.results[0])
+
+      })
+  });
   }
 
-  buscarPersonaje() {
+  /* buscarPersonaje() {
     this.personajeService.buscar(this.nombre).subscribe((item) => {
       console.log(item);
-      this.personaje = item;
+      this.personaje = item
     });
-  }
-
+  } */
+getPersonaje(){
+  this.personajeService.getByName(this.nombre).subscribe((item) =>{
+    console.log(item);
+  })
+}
 
 }

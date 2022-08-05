@@ -21,3 +21,5 @@ export class ComicsService {
     }));
    }
 }
+/* Con .pipe estamos haciendo un filtro a los datos para que vengan limpios y con map estamos devolviendo
+un nuevo array con esos datos limpios.  */
