@@ -2,11 +2,11 @@
   <section class="get-in-touch">
     <h2 class="title">Comics</h2>
     <div class="personajes">
-      <div class="bodyCards" *ngFor="let comic of comics">
+      <div class="bodyCards text-center" *ngFor="let comic of comics">
         <div class="card cards" style="width: 18rem;">
           <img src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}" alt="" class="w-100">
           <div class="card-body">
-            <h5 class="card-title">{{comic.title}}</h5>
+            <h5 class="card-title text-center" >{{comic.title}}</h5>
             <button type="button" class="btn btn-lg  submit-btn"><a routerLink="">Detalles</a></button>
           </div>
         </div>

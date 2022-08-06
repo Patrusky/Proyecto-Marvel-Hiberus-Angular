@@ -24,6 +24,7 @@ a {
   max-width: 800px;
   margin: 50px auto;
   position: relative;
+  color: #5543ca;
 }
 
 .get-in-touch .title {
@@ -77,4 +78,11 @@ a {
   border: none;
   width: 200px;
   cursor: pointer;
+}
+
+.btnpersonaje{
+  background-color: #000;
+  background-image: linear-gradient(125deg, #a72879, #064497);
+  color: white;
+  margin: 0 5px;
 }

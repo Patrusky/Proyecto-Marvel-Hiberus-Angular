@@ -12,6 +12,10 @@ footer a {
     color: white !important;
 }
 
+footer a img {
+    cursor: pointer;
+}
+
 @media (max-width: 762px) {
     .logofooter {
         justify-content: center;

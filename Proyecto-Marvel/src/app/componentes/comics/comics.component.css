@@ -16,7 +16,8 @@ a {
   margin: 20px;
   display: flex;
   max-height: 800px;
-
+  flex-direction: column;
+  color: #5543ca;
 }
 
 img {
@@ -60,4 +61,12 @@ img {
   border: none;
   width: 200px;
   cursor: pointer;
+}
+
+.card-body{
+  flex: 1 1 auto;
+}
+
+h5.card-title.text-center {
+  font-weight: bold;
 }

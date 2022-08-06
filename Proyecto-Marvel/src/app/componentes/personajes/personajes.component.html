@@ -3,7 +3,7 @@
     <h2 class="title3">Busca tu Personaje</h2>
     Nombre: <input type="text" [(ngModel)]="nombre" />
 
-    <button (click)="getPersonaje()">BuscarP</button>
+    <button (click)="getPersonaje()" class="btnpersonaje">Buscar</button>
     <div *ngIf="personaje != null">
       <h2>Datos de tu Personaje: {{personaje.name}}</h2>
       <ul>
@@ -14,10 +14,10 @@
   </section>
   <section class="get-in-touch">
     <h1 class="title">Personajes</h1>
-    <div *ngFor="let heroe of heroes">
-      <div class="col-md-3">
-        <img src="{{heroe.thumbnail.path}}.{{heroe.thumbnail.extension}}" class="w-50">
-        <p>{{heroe.name}}</p>
+    <div class="row">
+      <div *ngFor="let heroe of heroes" class="col-md-3" >
+        <img src="{{heroe.thumbnail.path}}.{{heroe.thumbnail.extension}}" class="w-100">
+        <h5 class="pt-2 text-center">{{heroe.name}}</h5>
       </div>
     </div>
   </section>
