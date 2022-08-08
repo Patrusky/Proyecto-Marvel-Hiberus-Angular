@@ -5,40 +5,11 @@
       <div *ngFor="let heroe of heroes" class="card cards" style="width: 18rem;">
         <img src="{{heroe.thumbnail.path}}.{{heroe.thumbnail.extension}}" class="w-100">
         <h5 class="pt-2 titulo-personaje text-center">{{heroe.name}}</h5>
-        <button type="button" class="btn btn-btn-sm submit-btn btn-personaje justify-center"
-          (click)="open()">Detalles</button>
+        <button type="button" class="btn btn-btn-sm submit-btn btn-personaje justify-center" (click)="open(heroe.id)">Detalles</button>
       </div>
     </div>
   </section>
-  <!-- MODAL -->
-  <div class="modal fade" #myModal id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel"></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body" *ngFor="let heroe of heroes">
-          <div class="row">
-            <div class="col-md-4">
-              <img src="{{heroe.thumbnail.path}}.{{heroe.thumbnail.extension}}" class="w-100">
-            </div>
-            <div class="col-md-8">
-              <h3>{{heroe.name}}</h3>
-              <p>{{heroe.description}}</p>
 
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <section class="get-in-touch">
 
@@ -59,4 +30,34 @@
       </div>
     </div>
   </section>
+</div>
+
+<!-- MODAL -->
+<div class="modal fade" #myModal id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+aria-hidden="true">
+<div class="modal-dialog modal-lg" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel"></h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="{{heroe.thumbnail.path}}.{{heroe.thumbnail.extension}}" class="w-100">
+        </div>
+        <div class="col-md-8">
+          <h3>{{heroe.name}}</h3>
+          <p>{{heroe.description}}</p>
+
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
 </div>

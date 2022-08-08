@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { PersonajesService } from 'src/app/services/personajes.service';
 import { Modal } from 'bootstrap';
 import * as bootstrap from 'bootstrap';
+
+import { initPersonaje, Personaje } from 'src/app/models/personaje';
 
 @Component({
   selector: 'app-personajes',
@@ -12,10 +14,12 @@ export class PersonajesComponent {
 
   personajes: any[] = [];
   nombre: string = '';
-  personaje: any[] = [];
-  heroes: any[] = [];
+  personaje: Personaje[]=[];
+  heroes: Personaje[] = [];
+  heroe: Personaje = initPersonaje;
 
   myModal: Modal | undefined;
+
 
 
   constructor(private personajeService: PersonajesService) {
@@ -46,8 +50,11 @@ export class PersonajesComponent {
   }
 
   /*  Modal */
-  open() {
-    this.myModal = new bootstrap.Modal(document.getElementById('myModal') as HTMLElement, {
+  open(id: string) {
+    this.heroe = this.heroes.filter((h:Personaje) => {
+      return h.id == id;
+    })[0];
+    this.myModal = new bootstrap.Modal(document.getElementById('myModal') as HTMLElement,{
       keyboard: false
     })
     this.myModal?.show();
@@ -56,7 +63,6 @@ export class PersonajesComponent {
     // confirm or save something
     this.myModal?.toggle();
   }
-
 }
 
 /* ********** COMENTARIOS ********** */
