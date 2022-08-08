@@ -40,10 +40,12 @@
   </div>
 
   <section class="get-in-touch">
+
     <h2 class="title3">Busca tu Personaje</h2>
-    <label class="label">Nombre:</label>
     <input id="name" class="input-text js-input" type="text" required [(ngModel)]="nombre" />
-    <button (click)="buscarPersonaje()" class="btn btn-sm submit-btn">Buscar</button>
+<div class="boton-enviar">
+  <button (click)="buscarPersonaje()" class="btn btn-sm submit-btn-search" >Buscar</button>
+</div>
     <div *ngFor="let pers of personaje" class="pt-2 text-center row">
       <h2 class="p-2">Datos de tu Personaje</h2>
       
@@ -54,8 +56,6 @@
         <h2 class="pt-2 text-start">{{pers.name}}</h2>
         <p class="text-start">{{pers.description}}</p>
       </div>
-      
     </div>
-    <hr>
   </section>
 </div>
