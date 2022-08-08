@@ -12,7 +12,7 @@ export class PersonajesComponent {
 
   personajes: any[] = [];
   nombre: string = '';
-  personaje: any[]=[];
+  personaje: any[] = [];
   heroes: any[] = [];
 
   myModal: Modal | undefined;
@@ -37,6 +37,9 @@ export class PersonajesComponent {
   buscarPersonaje() {
     this.personajeService.getByName(this.nombre).subscribe((datos) => {
 
+      //Limpiamos Datos
+      this.personaje = [];
+
       this.personaje.push(datos.data.results[0]);
       console.log("Personaje", this.personaje);
     })
@@ -44,7 +47,7 @@ export class PersonajesComponent {
 
   /*  Modal */
   open() {
-    this.myModal = new bootstrap.Modal(document.getElementById('myModal') as HTMLElement,{
+    this.myModal = new bootstrap.Modal(document.getElementById('myModal') as HTMLElement, {
       keyboard: false
     })
     this.myModal?.show();
