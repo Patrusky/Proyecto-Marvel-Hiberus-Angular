@@ -21,7 +21,7 @@ a {
 }
 
 img {
-  max-height: 300px;
+  height: 300px;
 }
 
 .get-in-touch {
@@ -63,10 +63,21 @@ img {
   cursor: pointer;
 }
 
-.card-body{
+.card-body {
   flex: 1 1 auto;
 }
 
 h5.card-title.text-center {
   font-weight: bold;
+  width: 200px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+h5.card-title.text-center:hover {
+  width: auto;
+  white-space: unset;
+  text-overflow: unset;
+  overflow: unset;
 }
