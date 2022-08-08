@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PersonajesService } from 'src/app/services/personajes.service';
+import { Modal } from 'bootstrap';
+import * as bootstrap from 'bootstrap';
 
 @Component({
   selector: 'app-personajes',
@@ -10,8 +12,10 @@ export class PersonajesComponent {
 
   personajes: any[] = [];
   nombre: string = '';
-  personaje: any;
+  personaje: any[]=[];
   heroes: any[] = [];
+
+  myModal: Modal | undefined;
 
 
   constructor(private personajeService: PersonajesService) {
@@ -28,13 +32,30 @@ export class PersonajesComponent {
       })
     });
   }
+
+
   buscarPersonaje() {
-    this.personajeService.getByName(this.nombre).subscribe((item) => {
-      console.log(item);
-      this.personaje = item
+    this.personajeService.getByName(this.nombre).subscribe((datos) => {
+
+      this.personaje.push(datos.data.results[0]);
+      console.log("Personaje", this.personaje);
     })
   }
+
+  /*  Modal */
+  open() {
+    this.myModal = new bootstrap.Modal(document.getElementById('myModal') as HTMLElement,{
+      keyboard: false
+    })
+    this.myModal?.show();
+  }
+  saveSomeThing() {
+    // confirm or save something
+    this.myModal?.toggle();
+  }
+
 }
+
 /* ********** COMENTARIOS ********** */
 /*
 1º Traemos todos los datos con el getAll
