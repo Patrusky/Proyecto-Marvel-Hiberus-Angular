@@ -1,11 +1,12 @@
-<div class="container">
+<div class="container-fluid">
   <section class="get-in-touch">
     <h1 class="title">Personajes</h1>
-    <div class="row">
+    <div class="personajes">
       <div *ngFor="let heroe of heroes" class="card cards" style="width: 18rem;">
         <img src="{{heroe.thumbnail.path}}.{{heroe.thumbnail.extension}}" class="w-100">
         <h5 class="pt-2 titulo-personaje text-center">{{heroe.name}}</h5>
-        <button type="button" class="btn btn-btn-sm submit-btn btn-personaje justify-center" (click)="open()">Detalles</button>
+        <button type="button" class="btn btn-btn-sm submit-btn btn-personaje justify-center"
+          (click)="open()">Detalles</button>
       </div>
     </div>
   </section>
@@ -43,12 +44,12 @@
 
     <h2 class="title3">Busca tu Personaje</h2>
     <input id="name" class="input-text js-input" type="text" required [(ngModel)]="nombre" />
-<div class="boton-enviar">
-  <button (click)="buscarPersonaje()" class="btn btn-sm submit-btn-search" >Buscar</button>
-</div>
+    <div class="boton-enviar">
+      <button (click)="buscarPersonaje()" class="btn btn-sm submit-btn-search">Buscar</button>
+    </div>
     <div *ngFor="let pers of personaje" class="pt-2 text-center row">
       <h2 class="p-2">Datos de tu Personaje</h2>
-      
+
       <div class="col-md-6">
         <img src="{{pers.thumbnail.path}}.{{pers.thumbnail.extension}}" class="img-personaje">
       </div>

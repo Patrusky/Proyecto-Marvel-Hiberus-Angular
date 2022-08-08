@@ -1,13 +1,14 @@
-<div class="container">
+<div class="container-fluid">
   <section class="get-in-touch">
     <h1 class="title">Comics</h1>
-    <div class="personajes">
+    <div class="comics">
       <div class="bodyCards text-center" *ngFor="let comic of comics">
         <div class="card cards" style="width: 18rem;">
           <img src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}" alt="" class="w-100">
           <div class="card-body">
             <h5 class="card-title text-center">{{comic.title}}</h5>
-            <button type="button" class="btn btn-lg  submit-btn"><a routerLink="">Detalles</a></button>
+            <button type="button" class="btn btn-btn-sm submit-btn btn-comic justify-center"><a
+                routerLink="">Detalles</a></button>
           </div>
         </div>
       </div>
