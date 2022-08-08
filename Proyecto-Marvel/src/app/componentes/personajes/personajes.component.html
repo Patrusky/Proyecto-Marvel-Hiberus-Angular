@@ -2,10 +2,10 @@
   <section class="get-in-touch">
     <h1 class="title">Personajes</h1>
     <div class="row">
-      <div *ngFor="let heroe of heroes" class="col-md-3">
+      <div *ngFor="let heroe of heroes" class="card cards" style="width: 18rem;">
         <img src="{{heroe.thumbnail.path}}.{{heroe.thumbnail.extension}}" class="w-100">
-        <h5 class="pt-2 text-center">{{heroe.name}}</h5>
-        <button type="button" class="btn btn-btn-sm submit-btn" (click)="open()">Detalles</button>
+        <h5 class="pt-2 titulo-personaje text-center">{{heroe.name}}</h5>
+        <button type="button" class="btn btn-btn-sm submit-btn btn-personaje justify-center" (click)="open()">Detalles</button>
       </div>
     </div>
   </section>

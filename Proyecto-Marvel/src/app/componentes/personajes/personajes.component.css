@@ -15,13 +15,23 @@ a {
 
 .cards {
   padding: 10px;
-  margin: 20px;
+  margin: 15px;
   display: flex;
   flex-wrap: wrap;
 }
 
+.btn-personaje{
+  width: 245px !important;
+}
+
+.titulo-personaje {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 245px;
+}
+
 .get-in-touch {
-  max-width: 800px;
   margin: 50px auto;
   position: relative;
   color: #5543ca;
@@ -119,4 +129,17 @@ a {
   transition: -webkit-transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+
+@media  screen and (max-width: 762px) {
+  .cards {
+    width: 28rem !important;
+  }
+  .btn-personaje{
+    width: 98% !important;
+  }
+  
+  .titulo-personaje {
+    width: 98%;
+  }
 }
