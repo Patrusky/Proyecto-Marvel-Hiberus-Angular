@@ -8,6 +8,7 @@ body {
   margin: 50px auto;
   position: relative;
 }
+
 .get-in-touch .title {
   text-align: center;
   text-transform: uppercase;
@@ -18,11 +19,9 @@ body {
   color: #5543ca;
   background: #5543ca;
   background: -moz-linear-gradient(left, #f4524d 0%, #5543ca 100%) !important;
-  background: -webkit-linear-gradient(
-    left,
-    #f4524d 0%,
-    #5543ca 100%
-  ) !important;
+  background: -webkit-linear-gradient(left,
+      #f4524d 0%,
+      #5543ca 100%) !important;
   background: linear-gradient(to right, #f4524d 0%, #5543ca 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
@@ -30,29 +29,28 @@ body {
 }
 
 .get-in-touch .title3 {
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 2.2em;
-    line-height: 48px;
-    color: #5543ca;
-    background: #5543ca;
-    background: -moz-linear-gradient(left, #f4524d 0%, #5543ca 100%) !important;
-    background: -webkit-linear-gradient(
-      left,
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 2.2em;
+  line-height: 48px;
+  color: #5543ca;
+  background: #5543ca;
+  background: -moz-linear-gradient(left, #f4524d 0%, #5543ca 100%) !important;
+  background: -webkit-linear-gradient(left,
       #f4524d 0%,
-      #5543ca 100%
-    ) !important;
-    background: linear-gradient(to right, #f4524d 0%, #5543ca 100%) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    background-clip: transparent;
-  }
+      #5543ca 100%) !important;
+  background: linear-gradient(to right, #f4524d 0%, #5543ca 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: transparent;
+}
 
 .contact-form .form-field {
   position: relative;
   margin: 32px 0;
 }
+
 .contact-form .input-text {
   display: block;
   width: 100%;
@@ -63,14 +61,17 @@ body {
   line-height: 26px;
   font-weight: 400;
 }
+
 .contact-form .input-text:focus {
   outline: none;
 }
-.contact-form .input-text:focus + .label,
-.contact-form .input-text.not-empty + .label {
+
+.contact-form .input-text:focus+.label,
+.contact-form .input-text.not-empty+.label {
   -webkit-transform: translateY(-24px);
   transform: translateY(-24px);
 }
+
 .contact-form .label {
   position: absolute;
   left: 20px;
@@ -84,6 +85,7 @@ body {
   transition: transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
+
 .contact-form .submit-btn {
   display: inline-block;
   background-color: #000;
@@ -113,13 +115,13 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-.wrapper{
-    background: #ddd;
-    padding: 50px;
-    text-align: center;
+.wrapper {
+  background: #ddd;
+  padding: 50px;
+  text-align: center;
 }
 
-.wrapper .icon{
+.wrapper .icon {
   position: relative;
   background-color: #ffffff;
   border-radius: 50%;
@@ -211,16 +213,17 @@ body {
   color: #ffffff;
 }
 
-.responsive-map{
+.responsive-map {
   overflow: hidden;
-  padding-bottom:400px;
-  position:relative;
-  height:0;
-  }
-  .responsive-map iframe{
-  left:0;
-  top:0;
-  height:400px;
-  width:100%;
-  position:absolute;
-  }
+  padding-bottom: 400px;
+  position: relative;
+  height: 0;
+}
+
+.responsive-map iframe {
+  left: 0;
+  top: 0;
+  height: 400px;
+  width: 100%;
+  position: absolute;
+}
