@@ -1,36 +1,29 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
-@Injectable({
+ @Injectable({
   providedIn: 'root'
-})
-export class ComicsService {
+ })
+ export class ComicsService {
 
-  url: string = "https://gateway.marvel.com:443/v1/public/comics?ts=2&apikey=597e5f5ab2c799f16c0b4c25bcdc2eac&hash=0933ce7dab464a357a216f91dc030325";
-  cabeceras: HttpHeaders = new HttpHeaders({ "Content-type": "application/json" })
+ endpoint:string =  'comics';
 
-  constructor(private http: HttpClient) { }
+ constructor(private http: HttpClient) {
+    }
+ getAll(){
+    return this.http.get(`${environment.url}${this.endpoint}?ts=2&apikey=${environment.PUBLIC_KEY}&hash=${environment.HASH}&offset=2`)
+    .pipe(map((data:any) => {
+     return data.data.results;
+    }));
+   }
 
-  getAll(): Observable<any> {
-    return this.http.get(this.url, { headers: this.cabeceras });
-  }
-
-  /* buscar(nombre: string): Observable<any> {
-    let url: string = "https://gateway.marvel.com:443/v1/public/characters/" + nombre + "?ts=2&apikey=597e5f5ab2c799f16c0b4c25bcdc2eac&hash=0933ce7dab464a357a216f91dc030325";
-
-    return this.http.get(url);
-  } */
-  // getByName(nombre: string): Observable<any> {
-  //   let url: string = "https://gateway.marvel.com:443/v1/public/comics?nameStartsWith=" + nombre + "&ts=2&apikey=597e5f5ab2c799f16c0b4c25bcdc2eac&hash=0933ce7dab464a357a216f91dc030325";
-  //   return this.http.get(url);
-  // }
-  getById(id: number): Observable<any> {
+   getById(id: number): Observable<any> {
     let url: string = "https://gateway.marvel.com:443/v1/public/comics/" + id + "?ts=2&apikey=597e5f5ab2c799f16c0b4c25bcdc2eac&hash=0933ce7dab464a357a216f91dc030325";
 
     return this.http.get(url);
   }
-
 }
 
 /* ********** COMENTARIOS ********** */
@@ -47,31 +40,10 @@ getById --> Hacemos la llamda y traemos los id de los personajes. Aquí no piden
 
 
 
-// import { HttpClient, HttpHeaders } from '@angular/common/http';
-// import { Injectable } from '@angular/core';
-// import { map, Observable } from 'rxjs';
-// import { environment } from 'src/environments/environment';
 
-// @Injectable({
-//   providedIn: 'root'
-// })
-// export class ComicsService {
-
-//   endpoint:string =  'comics';
-
-//   constructor(private http: HttpClient) {
-
-//    }
-//    getAll(){
-//     return this.http.get(`${environment.url}${this.endpoint}?ts=2&apikey=${environment.PUBLIC_KEY}&hash=${environment.HASH}&offset=2`)
-//     .pipe(map((data:any) => {
-//       return data.data.results;
-//     }));
-//    }
-// }
-// /* ********** COMENTARIOS ********** */
-// /*
-// En esta llamada la url viene importada de environments, allí se han creado las variables de url, key y hash. Endpoint
-//  es otra parte de la url, que en este caso contiene comics.
-// Con .pipe estamos haciendo un filtro a los datos para que vengan limpios y con map estamos devolviendo
-// un nuevo array con esos datos limpios.  */
+/* ********** COMENTARIOS ********** */
+/*
+En esta llamada la url viene importada de environments, allí se han creado las variables de url, key y hash. Endpoint
+es otra parte de la url, que en este caso contiene comics.
+Con .pipe estamos haciendo un filtro a los datos para que vengan limpios y con map estamos devolviendo
+ un nuevo array con esos datos limpios.  */

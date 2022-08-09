@@ -20,8 +20,6 @@ export class PersonajesComponent {
 
   myModal: Modal | undefined;
 
-
-
   constructor(private personajeService: PersonajesService) {
     this.personajeService.getAll().subscribe((datos) => {
       this.personajes = datos.data.results;
@@ -37,14 +35,9 @@ export class PersonajesComponent {
     });
   }
 
-
   buscarPersonaje() {
     this.personajeService.getByName(this.nombre).subscribe((datos) => {
-
-      //Limpiamos Datos
-      this.personaje = [];
-
-      this.personaje.push(datos.data.results[0]);
+      this.personaje = datos.data.results;
       console.log("Personaje", this.personaje);
     })
   }
@@ -61,8 +54,10 @@ export class PersonajesComponent {
   }
   saveSomeThing() {
     // confirm or save something
-    this.myModal?.toggle();
+    this.myModal?.hide();
   }
+
+
 }
 
 /* ********** COMENTARIOS ********** */

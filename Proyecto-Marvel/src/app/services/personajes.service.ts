@@ -16,11 +16,6 @@ export class PersonajesService {
     return this.http.get(this.url, { headers: this.cabeceras });
   }
 
-  /* buscar(nombre: string): Observable<any> {
-    let url: string = "https://gateway.marvel.com:443/v1/public/characters/" + nombre + "?ts=2&apikey=597e5f5ab2c799f16c0b4c25bcdc2eac&hash=0933ce7dab464a357a216f91dc030325";
-
-    return this.http.get(url);
-  } */
   getByName(nombre: string): Observable<any> {
     let url: string = "https://gateway.marvel.com:443/v1/public/characters?nameStartsWith="+ nombre +"&ts=2&apikey=597e5f5ab2c799f16c0b4c25bcdc2eac&hash=0933ce7dab464a357a216f91dc030325";
     return this.http.get(url);

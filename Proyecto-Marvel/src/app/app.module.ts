@@ -11,10 +11,10 @@ import { ComicsComponent } from './componentes/comics/comics.component';
 import { FormularioComponent } from './componentes/formulario/formulario.component';
 import { ErrorComponent } from './componentes/error/error.component';
 import { PersonajesComponent } from './componentes/personajes/personajes.component';
-import { ComicDetalleComponent } from './componentes/comic-detalle/comic-detalle.component';
 import { PersonajesService } from './services/personajes.service';
 import { FormsModule } from '@angular/forms';
 import { ComicsService } from './services/comics.service';
+import { PersonajeDetallesComponent } from './componentes/personaje-detalles/personaje-detalles.component';
 
 
 
@@ -28,7 +28,7 @@ import { ComicsService } from './services/comics.service';
     FormularioComponent,
     ErrorComponent,
     PersonajesComponent,
-    ComicDetalleComponent
+    PersonajeDetallesComponent
   ],
   imports: [
     BrowserModule,

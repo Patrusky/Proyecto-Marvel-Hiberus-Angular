@@ -13,10 +13,7 @@ import { initComic, Comic } from 'src/app/models/comic';
 export class ComicsComponent {
 
   comics: any[] = [];
-  title: string = '';
-  comic: Comic[] = [];
-  description: Comic[] = [];
-  heroe: Comic = initComic;
+  comic: Comic = initComic;
 
   myModal: Modal | undefined;
 
@@ -24,7 +21,7 @@ export class ComicsComponent {
 
   constructor(private comicService: ComicsService) {
     this.comicService.getAll().subscribe((datos) => {
-      this.comics = datos.data.results;
+      this.comics = datos;
       console.log("Comics", this.comics);
     });
 
@@ -43,7 +40,7 @@ export class ComicsComponent {
   }
   saveSomeThing() {
     // confirm or save something
-    this.myModal?.toggle();
+    this.myModal?.hide();
   }
 }
 

@@ -2,12 +2,13 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Personaje } from 'src/app/models/personaje';
 
 @Component({
-  selector: 'app-personaje-detalle',
-  templateUrl: './comic-detalle.component.html',
-  styleUrls: ['./comic-detalle.component.css']
+  selector: 'app-personaje-detalles',
+  templateUrl: './personaje-detalles.component.html',
+  styleUrls: ['./personaje-detalles.component.css']
 })
-export class ComicDetalleComponent implements OnInit {
-  @Input() personaje: Personaje= {
+export class PersonajeDetallesComponent implements OnInit {
+
+  @Input() pers: Personaje= {
     id:'',
     name: '',
     description:'',
@@ -24,7 +25,7 @@ export class ComicDetalleComponent implements OnInit {
   }
 
   showDetail(){
-    this.showPersonaje.emit(this.personaje.id)
+    this.showPersonaje.emit(this.pers.id)
   }
 
 }
