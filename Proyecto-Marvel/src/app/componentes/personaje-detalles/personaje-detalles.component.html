@@ -1,14 +1,24 @@
-<div class="personajes">
-  <div class="card-body">
-    <div class="row">
-      <div class="col-md-4">
-        <img src="{{pers.thumbnail.path}}.{{pers.thumbnail.extension}}" class="w-100">
+<div class="container center">
+  <div class="">
+    <div class="card  ">
+      <div class="row text-center">
+        <div class="col-md-5">
+          <img src="{{personaje.thumbnail.path}}.{{personaje.thumbnail.extension}}" class="w-100">
+        </div>
+        <div class="col-md-7">
+          <div class="card-body">
+            <h3 class="title">{{personaje.name}}</h3>
+            <p class="card-text">{{personaje.description}}</p>
+          </div>
+        </div>
       </div>
-      <div class="col-md-8 text-center">
-        <h3>{{pers.name}}</h3>
-        <p>{{pers.description}}</p>
+    </div>
+    <div class="row">
+      <div class="col-md-3 offset-5 mt-4 ">
+        <button type="button" class="btn btn-btn-sm submit-btn btn-personaje justify-center"
+          [routerLink]="['/personajes']">Volver</button>
       </div>
     </div>
   </div>
-</div>
 
+</div>

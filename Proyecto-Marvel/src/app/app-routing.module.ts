@@ -5,12 +5,14 @@ import { ComicsComponent } from './componentes/comics/comics.component';
 import { PersonajesComponent } from './componentes/personajes/personajes.component';
 import { FormularioComponent } from './componentes/formulario/formulario.component';
 import { ErrorComponent } from './componentes/error/error.component';
+import { PersonajeDetallesComponent } from './componentes/personaje-detalles/personaje-detalles.component';
 
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'comics', component: ComicsComponent },
   { path: 'personajes', component: PersonajesComponent },
+  { path: 'personaje/:id', component: PersonajeDetallesComponent },
   { path: 'contactanos', component: FormularioComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: ErrorComponent }

@@ -27,7 +27,7 @@
             <h5 class="card-title text-center">{{pers.name}}</h5>
             <!-- <app-personaje-detalles [pers]="pers" *ngFor="let pers of personaje"></app-personaje-detalles> -->
             <button type="button" class="btn btn-btn-sm submit-btn btn-personaje justify-center"
-          routerLink="../personaje-detalles/personaje-detalles.component.html">Detalles</button>
+          [routerLink]="['/personaje', pers.id]">Detalles</button>
           </div>
         </div>
       </div>
